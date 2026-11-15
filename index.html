@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Computer Science Academy, Barnala, Azad Kashmir Pakistan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#eef2f7;color:#222}
+header{background:#0a2a5e;color:#fff;padding:12px 15px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
+header img{width:55px;height:55px;border-radius:50%;background:#fff;object-fit:cover}
+header h1{font-size:18px;line-height:1.2}
+header p{font-size:12px;opacity:.9}
+nav{background:#fff;display:flex;justify-content:space-between;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.08);position:sticky;top:79px;z-index:99}
+nav button{flex:1;background:none;border:none;padding:11px 2px;font-size:12px;font-weight:700;cursor:pointer;color:#0a2a5e;border-bottom:3px solid transparent;white-space:nowrap}
+nav button.active{border-bottom:3px solid #f5b301;color:#000}
+.container{max-width:900px;margin:auto;padding:15px}
+.card{background:#fff;border-radius:14px;padding:18px;margin-bottom:15px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+h2{color:#0a2a5e;margin-bottom:10px;font-size:20px}
+h3{margin:10px 0 5px;color:#0a2a5e}
+p{line-height:1.6;font-size:14px}
+.principal{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+.principal img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid #f5b301}
+.badge{display:inline-block;background:#0a2a5e;color:#fff;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:700;margin-top:5px}
+.course{border:1px solid #e5e5e5;border-radius:10px;padding:12px;margin-bottom:10px}
+.course b{color:#0a2a5e}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px;border:2px solid #e5e5e5}
+input,select{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin:7px 0;font-size:15px}
+.btn{width:100%;background:#0a2a5e;color:#fff;border:none;padding:13px;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;margin-top:8px}
+.btn-yellow{background:#f5b301;color:#000}
+.success{background:#d4edda;border:1px solid #28a745;padding:14px;border-radius:10px;margin-top:12px}
+.error{background:#f8d7da;border:1px solid #dc3545;padding:14px;border-radius:10px;margin-top:12px}
+.hidden{display:none !important}
+.footer{text-align:center;padding:15px;font-size:12px;color:#666}
+.whatsapp{position:fixed;bottom:15px;right:15px;background:#25D366;color:#fff;padding:12px 16px;border-radius:50px;text-decoration:none;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+</style>
+</head>
+<body>
+<header>
+<img src="logo.jpg" alt="Logo" onerror="this.style.display='none'">
+<div><h1>Smart Computer Science Academy</h1><p>Barnala, District Bhimber, Azad Kashmir, Pakistan</p></div>
+</header>
+<nav>
+<button onclick="showTab('tab-home',this)" class="active">Home</button>
+<button onclick="showTab('tab-courses',this)">Courses</button>
+<button onclick="showTab('tab-verify-certificate',this)">Verify Certificate</button>
+<button onclick="showTab('tab-contact',this)">Contact</button>
+</nav>
+<div class="container">
+<div id="tab-home" class="tab-page">
+<div class="card">
+<div style="text-align:center">
+<h2>Welcome to Smart Computer Science Academy</h2>
+<h2>Empowering Your Digital Future</h2>
+<p>Learn Computer Skills for a Bright Future.</p>
+</div>
+<div class="principal" style="margin-top:15px">
+<img src="principal.jpg" alt="Principal">
+<div>
+<h3>Muhammad Parvez</h3>
+<p>Principal & Founder</p>
+<span class="badge">30 Years Practical Computer Experience</span>
+<p style="margin-top:8px">Our mission is to provide quality computer education in Barnala at affordable fees.</p>
+</div>
+</div>
+<h3 style="margin-top:18px">Our Computer Lab - Qila Padhar, Barnala AJ&K.</h3>
+<div class="gallery">
+<img src="lab1.jpg" alt="Lab 1" onerror="this.style.display='none'">
+<img src="lab2.jpg" alt="Lab 2" onerror="this.style.display='none'">
+<img src="lab3.jpg" alt="Lab 3" onerror="this.style.display='none'">
+<img src="lab4.jpg" alt="Lab 4" onerror="this.style.display='none'">
+</div>
+<h3 style="margin-top:18px">Why Choose Us?</h3>
+<p>✅ Institute Certificate<br>✅ Online Verification<br>✅ Experienced Teacher<br>✅ 100% Practical Training<br>✅ Separate Classes for Boys & Girls<br>✅ Affordable Fees<br>✅ Modern Lab with Projector<br>✅ Flexible Timings Morning / Evening</p>
+</div>
+</div>
+<div id="tab-courses" class="tab-page hidden">
+<div class="card">
+<h2>Our 6 Courses</h2>
+<div class="gallery" style="margin-top:5px;margin-bottom:12px">
+<img src="poster1.jpg" alt="COA Poster" onerror="this.style.display='none'">
+<img src="poster2.jpg" alt="CCA Poster" onerror="this.style.display='none'">
+<img src="poster3.jpg" alt="DCA Poster" onerror="this.style.display='none'">
+<img src="poster4.jpg" alt="Adobe Photoshop Poster" onerror="this.style.display='none'">
+</div>
+<div class="course"><b>1. Basic Typing Course</b><br>Duration: 1 Month | English & Urdu Typing</div>
+<div class="course"><b>2. Typing Skill Course</b><br>Duration: 2 Months | English/Urdu Typing & Advanced Typing Speed</div>  
+<div class="course"><b>3. COA - Certificate in Office Automation</b><br>Duration: 01 Month | Basic Knowledge of Computer, MS Word, Excel & PowerPoint</div>
+<div class="course"><b>4. CCA - Certificate in Computer Applications</b><br>Duration: 02 Months | Typing (English/Urdu), Basic Knowledge of Computer, MS Word, Excel & PowerPoint</div>
+<div class="course"><b>5. DCA - Diploma in Computer Applications</b><br>Duration: 03 Months | Typing (English/Urdu), Basic Knowledge of Computer, MS Word, Excel & PowerPoint, Software & Hardware Installation</div>
+<div class="course"><b>6. Adobe Photo Shop</b><br>Duration: 01 Month | Introduction of Photoshop & Tools, Photo Editing/Background Changing/Retouching/Face Cleaning, Passport Size Photo</div>
+</div>
+</div>
+<div id="tab-verify-certificate" class="tab-page hidden">
+<div class="card">
+<h2>Verify Certificate</h2>
+<p>Please Enter Certificate Number then click on Verify.</p>
+<input type="text" id="verifyInput">
+<button class="btn" onclick="verifyCert()">Verify</button>
+<div id="verifyResult"></div>
+</div>
+</div>
+<div id="tab-contact" class="tab-page hidden">
+<div class="card">
+<h2>Contact Us</h2>
+<p><b>Address:</b> Qila Padhar P/O & Tehsil Barnala District Bhimber Azad Kashmir, Pakistan</p>
+<p><b>Call 1:</b> +92 355 6499048</p>
+<p><b>Call 2:</b> +92 347 9951191</p>
+<p><b>WhatsApp:</b> +92 306 8905860</p>  
+<p><b>Email:</b> smartcomp812@gmail.com</p>  
+<p><b>Website:</b> https://scsabarnala.github.io/ (Please Enter Exact Words)</p>  
+<p><b>Timing:</b> Saturday - Thursday | 9 AM - 5 PM</p>
+<p><b>Friday:</b> Holiday</p>
+<a href="https://wa.me/923068905860" target="_blank"><button class="btn" style="background:#25D366">Chat on WhatsApp</button></a>
+</div>
+</div>
+</div>
+<div class="footer">© 2026 Smart Computer Science Academy, Barnala, AJ&K. All Rights Reserved.</div>
+<a class="whatsapp" href="https://wa.me/923068905860" target="_blank">WhatsApp</a>
+<div style="text-align:center; font-family:Arial; font-size:16px; font-weight:bold; background:#000; color:#fff; padding:10px; margin:10px; border-radius:10px;">
+Total Visitors: <span id="visitCount">Loading...</span>
+</div>
+<script>
+fetch('https://abacus.jasoncameron.dev/hit/scsabarnala/visits')
+.then(res => res.json())
+.then(data => {
+document.getElementById('visitCount').innerText = data.value;
+});
+</script>
+<script>
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbxWCsCwf5MRPUT1VrZruAwERXavJvjJwsFYckUPkOb8FOwxNL0_rsgjRrbRt4UOGSmrQw/exec";
+function showTab(id,btn){
+  document.querySelectorAll('.tab-page').forEach(d=>d.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+async function verifyCert(){
+  let no = document.getElementById('verifyInput').value.trim().toUpperCase();
+  let r = document.getElementById('verifyResult');
+  if(!no){ r.innerHTML = `<div class="error">Please enter Certificate Number</div>`; return; }
+  r.innerHTML = `<p>Checking... Please wait</p>`;
+  try{
+    let res = await fetch(SHEET_URL + "?id=" + encodeURIComponent(no));
+    let data = await res.json();
+    if(data.found){
+      r.innerHTML = `<div class="success"><b>VERIFIED</b><br><br><b>Name:</b> ${data.name}<br><b>Course:</b> ${data.course}<br><b>Issue Date:</b> ${data.date}<br><br>This certificate was issued by Smart Computer Science Academy, Barnala, AJ&K, Pakistan</div>`;
+    } else {
+      r.innerHTML = `<div class="error"><b>NOT FOUND</b><br>Certificate ${no} is not valid. Please Contact Smart Computer Science Academy.</div>`;
+    }
+  }catch(e){ r.innerHTML = `<div class="error">Connection error. Check Google Sheet URL.</div>`; }
+}
+</script>
+</body>
+</html>
