@@ -84,7 +84,7 @@ input,select{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;ma
 <img src="poster3.jpg" alt="Poster 3" onerror="this.style.display='none'">
 <img src="poster4.jpg" alt="Poster 4" onerror="this.style.display='none'">
 </div>
-<div class="course"><b>1. Hair Style & Beautician Course</b><br>Duration: 2 Month | Facial, Threading, Plucking, Cutting, Waxing, Party Make Up, Sking Polish, Mehndi, Pedicure, Manicure & Bridal Make Up</div>
+<div class="course"><b>1. Hair Style & Beautician Course</b><br>Duration: 2 Months | Facial, Threading, Plucking, Cutting, Waxing, Party Make Up, Sking Polish, Mehndi, Pedicure, Manicure & Bridal Make Up</div>
 </div>
 </div>
 <div id="tab-verify-certificate" class="tab-page hidden">
@@ -141,7 +141,7 @@ async function verifyCert(){
     let res = await fetch(SHEET_URL + "?id=" + encodeURIComponent(no));
     let data = await res.json();
     if(data.found){
-      r.innerHTML = `<div class="success"><b>VERIFIED</b><br><br><b>Name:</b> ${data.name}<br><b>Course:</b> ${data.course}<br><b>Issue Date:</b> ${data.date}<br><br>This certificate was issued by Smart Computer Science Academy, Barnala, AJ&K, Pakistan</div>`;
+      r.innerHTML = `<div class="success"><b>VERIFIED</b><br><br><b>Name:</b> ${data.name}<br><b>Course:</b> ${data.course}<br><b>Issue Date:</b> ${data.date}<br><br>This certificate was issued by Smart Beauty Parlour Mera Jattan (Watala), Barnala Distt. Bhimber AJ&K</div>`;
     } else {
       r.innerHTML = `<div class="error"><b>NOT FOUND</b><br>Certificate ${no} is not valid. Please Contact Smart Beauty Parlour Mera Jattan (Watala).</div>`;
     }
