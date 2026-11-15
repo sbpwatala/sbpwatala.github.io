@@ -114,21 +114,25 @@ input,select{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;ma
 <div class="footer">© 2026 Smart Beauty Parlour Mera Jattan (Watala), Barnala, AJ&K. All Rights Reserved.</div>
 <a class="whatsapp" href="https://wa.me/923068905860" target="_blank">WhatsApp</a>
 <div style="text-align:center; font-family:Arial; font-size:16px; font-weight:bold; background:#000; color:#fff; padding:10px; margin:10px; border-radius:10px;">
-Total Visitors: <span id="visitCount">Loading...</span>
+Total Visitors: <span id="visitCount">...</span>
 </div>
 <script>
-fetch('https://abacus.jasoncameron.dev/create/sbpwatala/visits')
-.then(res => res.json())
-.then(data => {
-  return fetch('https://abacus.jasoncameron.dev/hit/sbpwatala/visits');
-})
-.then(res => res.json())
-.then(data => {
-  document.getElementById('visitCount').innerText = data.value;
-})
-.catch(e => {
-  document.getElementById('visitCount').innerText = "1";
-});
+// FAST COUNTER - Shows saved number instantly, then updates in background
+(function(){
+  var el = document.getElementById('visitCount');
+  var saved = localStorage.getItem('sbp_visits');
+  if(saved){ el.innerText = saved; } else { el.innerText = "1"; }
+  // Only 1 fast call now, no create call
+  fetch('https://abacus.jasoncameron.dev/hit/sbpwatala/visits')
+  .then(function(res){ return res.json(); })
+  .then(function(data){
+    if(data && data.value != null){
+      el.innerText = data.value;
+      localStorage.setItem('sbp_visits', data.value);
+    }
+  })
+  .catch(function(){ /* keep saved number, don't show Loading */ });
+})();
 </script>
 <script>
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbzXBqqvTZhd3oDh67u6VqACI18rUndUt7yNbLPWnDoUucQ-7meMrapUMw5YUkt44vU7/exec";
