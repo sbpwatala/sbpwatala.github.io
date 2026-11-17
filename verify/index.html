@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Verify Certificate - SBP Watala</title>
+<title>SBP Watala - Certificate</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{font-family:Arial;text-align:center;padding:20px}
-.box{max-width:500px;margin:auto;border:2px solid #e91e63;padding:20px;border-radius:10px}
-h1{color:#e91e63}
-a{display:inline-block;background:#e91e63;color:#fff;padding:12px 20px;text-decoration:none;border-radius:5px;margin-top:15px}
+*{margin:0;padding:0;box-sizing:border-box}
+body,html{width:100%;height:100%;overflow:hidden;background:#000}
+iframe{width:100%;height:100%;border:none}
+#blocker{position:fixed;top:0;right:0;width:60px;height:50px;z-index:999;background:transparent}
 </style>
 </head>
-<body>
-<div class="box">
-<h1>SBP Watala</h1>
-<h2>Certificate Verified ✅</h2>
-<p>ID: <b id="cid"></b></p>
-<p>Ye certificate asli hai aur SBP Watala se jari hua hai.</p>
-<a id="link" href="#">View Certificate PDF</a>
-</div>
+<body oncontextmenu="return false">
+
+<iframe id="pdf" src=""></iframe>
+<div id="blocker"></div>
+
 <script>
 let id = new URLSearchParams(location.search).get('id');
-document.getElementById('cid').innerText = id;
-document.getElementById('link').href = '../certificates/' + id + '.pdf';
+if(!id){
+  document.body.innerHTML = "<h2 style='color:white;text-align:center;padding-top:50px'>Invalid Certificate</h2>";
+} else {
+  // SCSA jaisa hi - toolbar, download, print sab band
+  document.getElementById('pdf').src = '../certificates/' + id + '.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH';
+}
+
+// Right click band
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Print band - Ctrl+P, Ctrl+S, Ctrl+C
+document.addEventListener('keydown', function(e){
+  if((e.ctrlKey || e.metaKey) && ['p','s','c','u'].includes(e.key.toLowerCase())){
+    e.preventDefault();
+    alert('Print / Download not allowed');
+  }
+});
 </script>
 </body>
 </html>
