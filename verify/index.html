@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verify Certificate - SBP Watala</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;text-align:center;padding:20px}
+.box{max-width:500px;margin:auto;border:2px solid #e91e63;padding:20px;border-radius:10px}
+h1{color:#e91e63}
+a{display:inline-block;background:#e91e63;color:#fff;padding:12px 20px;text-decoration:none;border-radius:5px;margin-top:15px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>SBP Watala</h1>
+<h2>Certificate Verified ✅</h2>
+<p>ID: <b id="cid"></b></p>
+<p>Ye certificate asli hai aur SBP Watala se jari hua hai.</p>
+<a id="link" href="#">View Certificate PDF</a>
+</div>
+<script>
+let id = new URLSearchParams(location.search).get('id');
+document.getElementById('cid').innerText = id;
+document.getElementById('link').href = '../certificates/' + id + '.pdf';
+</script>
+</body>
+</html>
